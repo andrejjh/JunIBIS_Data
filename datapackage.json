@@ -1,0 +1,859 @@
+{
+  "name": "junibis_data",
+  "title": "JunIBIS.be Data Package",
+  "homepage": "http://www.junibis.be",
+  "version": "1.0.28",
+  "resources": [
+    {
+      "path": "events.csv",
+      "pathType": "local",
+      "name": "events",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "title": "Events",
+      "description": "Events of the campaign: eg Battles.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Event identifier",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Event short name",
+            "format": "default"
+          },
+          {
+            "name": "kind",
+            "type": "integer",
+            "description": "Event kind, see vocabulary",
+            "format": "default"
+          },
+          {
+            "name": "begindate",
+            "type": "datetime",
+            "description": "Event starting datetime",
+            "format": "default"
+          },
+          {
+            "name": "enddate",
+            "type": "datetime",
+            "description": "Event ending datetime",
+            "format": "default"
+          },
+          {
+            "name": "source",
+            "type": "integer",
+            "description": "Source of information",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "kind",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "source",
+            "reference": {
+              "resource": "sources",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "people.csv",
+      "pathType": "local",
+      "name": "people",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "People",
+      "description": "People involved in the campaign, mostly commanders of units. ",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Person identifier",
+            "format": "default"
+          },
+          {
+            "name": "sha1",
+            "type": "string",
+            "description": "Person hash code",
+            "format": "default"
+          },
+          {
+            "name": "rank",
+            "type": "integer",
+            "description": "Person rank, see vocabulary",
+            "format": "default"
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "description": "Person title, see vocabulary",
+            "format": "default"
+          },
+          {
+            "name": "firstname",
+            "type": "string",
+            "description": "Person firstname",
+            "format": "default"
+          },
+          {
+            "name": "lastname",
+            "type": "string",
+            "description": "Person lastname",
+            "format": "default"
+          },
+          {
+            "name": "nation",
+            "type": "integer",
+            "description": "Person nationality, see vocabulary",
+            "format": "default"
+          },
+          {
+            "name": "wikidata",
+            "type": "string",
+            "description": "Person wikidata",
+            "format": "default"
+          },
+          {
+            "name": "source",
+            "type": "integer",
+            "description": "Source of information",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "rank",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "title",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "nation",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "source",
+            "reference": {
+              "resource": "sources",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "positions.csv",
+      "pathType": "local",
+      "name": "positions",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-2",
+      "title": "positions",
+      "description": "Hourly unit positions give the estimated position of each unit hour by hour.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "unitid",
+            "type": "string",
+            "description": "Unit identifier",
+            "format": "default"
+          },
+          {
+            "name": "icon",
+            "type": "integer",
+            "description": "Unit icon",
+            "format": "default"
+          },
+          {
+            "name": "army",
+            "type": "integer",
+            "description": "Unit army",
+            "format": "default"
+          },
+          {
+            "name": "step",
+            "type": "integer",
+            "description": "Time in hour since beginning of the campaign",
+            "format": "default"
+          },
+          {
+            "name": "datetime",
+            "type": "datetime",
+            "description": "Position datatime",
+            "format": "default"
+          },
+          {
+            "name": "geopos",
+            "type": "geopoint",
+            "description": "Position coordinates (longitude, latitude)",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "path": "schemes.csv",
+      "pathType": "local",
+      "name": "schemes",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "vocabulary schemes",
+      "description": "Groups of vocabulary terms.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Scheme identifier",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Scheme short name",
+            "format": "default"
+          },
+          {
+            "name": "name_de",
+            "type": "string",
+            "description": "Scheme German name",
+            "format": "default"
+          },
+          {
+            "name": "name_en",
+            "type": "string",
+            "description": "Scheme English name",
+            "format": "default"
+          },
+          {
+            "name": "name_fr",
+            "type": "string",
+            "description": "Scheme French name",
+            "format": "default"
+          },
+          {
+            "name": "name_nl",
+            "type": "string",
+            "description": "Scheme Dutch name",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id"
+      }
+    },
+    {
+      "path": "sources.csv",
+      "pathType": "local",
+      "name": "sources",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "Sources",
+      "description": "Sources of the information.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Source identifier",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Source short name",
+            "format": "default"
+          },
+          {
+            "name": "kind",
+            "type": "string",
+            "description": "Source kind",
+            "format": "default"
+          },
+          {
+            "name": "sourcegroup",
+            "type": "string",
+            "description": "Source group short name",
+            "format": "default"
+          },
+          {
+            "name": "sourcegroup_id",
+            "type": "integer",
+            "description": "Source group identifier",
+            "format": "default"
+          },
+          {
+            "name": "reference",
+            "type": "string",
+            "description": "Full reference of the source",
+            "format": "default"
+          },
+          {
+            "name": "image",
+            "type": "string",
+            "description": "Source image",
+            "format": "default"
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "Source URL",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "sourcegroup_id",
+            "reference": {
+              "resource": "sources_groups",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "sourcesgroups.csv",
+      "pathType": "local",
+      "name": "sourcesgroups",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "Source groups.",
+      "description": "Groups of source. Could be books, zines, games...",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Source group identifier",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Source group short name",
+            "format": "default"
+          },
+          {
+            "name": "name_de",
+            "type": "string",
+            "description": "Source group German name",
+            "format": "default"
+          },
+          {
+            "name": "name_en",
+            "type": "string",
+            "description": "Source group English name",
+            "format": "default"
+          },
+          {
+            "name": "name_fr",
+            "type": "string",
+            "description": "Source group French name",
+            "format": "default"
+          },
+          {
+            "name": "name_nl",
+            "type": "string",
+            "description": "Source group Dutch name",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id"
+      }
+    },
+    {
+      "path": "terms.csv",
+      "pathType": "local",
+      "name": "terms",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "vocabulary terms",
+      "description": "Vocabulary terms grouped into schemes.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "integer",
+            "description": "Term identifier",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "type": "string",
+            "description": "Term short name",
+            "format": "default"
+          },
+          {
+            "name": "scheme_code",
+            "type": "string",
+            "description": "Term scheme short name",
+            "format": "default"
+          },
+          {
+            "name": "scheme_id",
+            "type": "integer",
+            "description": "Term scheme identifier",
+            "format": "default"
+          },
+          {
+            "name": "name_de",
+            "type": "string",
+            "description": "Term German name",
+            "format": "default"
+          },
+          {
+            "name": "name_en",
+            "type": "string",
+            "description": "Term English name",
+            "format": "default"
+          },
+          {
+            "name": "name_fr",
+            "type": "string",
+            "description": "Term French name",
+            "format": "default"
+          },
+          {
+            "name": "name_nl",
+            "type": "string",
+            "description": "Term Dutch name",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "scheme_id",
+            "reference": {
+              "resource": "schemes",
+              "fields": "id"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "uelinks.csv",
+      "pathType": "local",
+      "name": "uelinks",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "title": "Unit event links",
+      "description": "These links indicate the presence of a unit at a certain event.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "unit_id",
+            "type": "integer",
+            "description": "Unit identifier",
+            "format": "default"
+          },
+          {
+            "name": "event_id",
+            "type": "integer",
+            "description": "Event identifier",
+            "format": "default"
+          },
+          {
+            "name": "source",
+            "type": "integer",
+            "description": "Source of information",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "foreignKeys": [
+          {
+            "fields": "unit_id",
+            "reference": {
+              "resource": "units",
+              "fields": "id"
+              }
+          },
+          {
+            "fields": "event_id",
+            "reference": {
+              "resource": "events",
+              "fields": "id"
+              }
+          },
+          {
+            "fields": "source",
+            "reference": {
+              "resource": "sources",
+              "fields": "id"
+              }
+          }
+        ]
+      }
+    },
+    {
+      "path": "units.csv",
+      "pathType": "local",
+      "name": "units",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "UTF-8",
+      "title": "Units",
+      "description": "Combat Units at various rank.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "description": "Unit identifier",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "code",
+            "description": "Unit code",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "parent",
+            "description": "Parent Unit code",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "parent_id",
+            "description": "Parent Unit identifier",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "absence",
+            "description": "Yes indicates that this unit did not took part in the campaign.",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "name",
+            "description": "Unit name in national language",
+            "type": "string",
+            "format": "default"
+          },
+          {
+            "name": "bataillons",
+            "description": "Number of bataillons in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "squadrons",
+            "description": "Number of squadrons in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "batteries",
+            "description": "Number of batteries in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "engineers",
+            "description": "Number of engineers in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "ems",
+            "description": "Number of Etat Major staff in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "officers",
+            "description": "Number of officers in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "men",
+            "description": "Number of rank & files in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "total",
+            "description": "Total number of men in unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "category",
+            "description": "Unit category, see vocabulary",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "rank",
+            "description": "Unit rank, see vocabulary",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "nation",
+            "description": "Unit nation, see vocabulary",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "icon",
+            "description": "Icon used to represent the unit",
+            "type": "integer",
+            "format": "default"
+          },
+          {
+            "name": "source",
+            "description": "Source of information",
+            "type": "integer",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "id",
+        "foreignKeys": [
+          {
+            "fields": "parent_id",
+            "reference": {
+              "resource": "units",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "category",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "rank",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "nation",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+            }
+          },
+          {
+            "fields": "source",
+            "reference": {
+              "resource": "sources",
+              "fields": "id"
+              }
+          }
+        ]
+      }
+    },
+    {
+      "path": "uplinks.csv",
+      "pathType": "local",
+      "name": "uplinks",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "ISO-8859-1",
+      "title": "Unit person links",
+      "description": "These links indicates the role of a person in a certain unit, mostly commanding.",
+      "dialect": {
+        "delimiter": ",",
+        "quoteChar": "\""
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "unit_id",
+            "type": "integer",
+            "description": "Unit identifier",
+            "format": "default"
+          },
+          {
+            "name": "person_id",
+            "type": "integer",
+            "description": "Person identifier",
+            "format": "default"
+          },
+          {
+            "name": "role_id",
+            "type": "integer",
+            "description": "Person role in unit, see vocabulary",
+            "format": "default"
+          },
+          {
+            "name": "source",
+            "type": "integer",
+            "description": "Source of information",
+            "format": "default"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "foreignKeys": [
+          {
+            "fields": "unit_id",
+            "reference": {
+              "resource": "units",
+              "fields": "id"
+              }
+          },
+          {
+            "fields": "person_id",
+            "reference": {
+              "resource": "people",
+              "fields": "id"
+              }
+          },
+          {
+            "fields": "role_id",
+            "reference": {
+              "resource": "terms",
+              "fields": "id"
+              }
+          },
+          {
+            "fields": "source",
+            "reference": {
+              "resource": "sources",
+              "fields": "id"
+              }
+          }
+        ]
+      }
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ir. André Heughebaert",
+      "role": "author"
+    },
+    {
+      "title": "Ir. Eric Iven",
+      "role": "author"
+    }
+  ],
+  "readme": "The Campaign of Belgium in 1815 marked the end of the Napoleonic wars. This dataset lists the armies and units in presence, their commanders and their hourly positions during the six days of campaign between June 15 and June 20. Maps and further details are available on [JunIBIS.be](http://www.junibis.be).\n\n### Why was dataset created?\nFan of Napoleonic history, especially passionate for the First Empire wars, and poured into the area of ​​digital mapping, I wanted to create interactive maps depicting the Campaign of Belgium of June 1815. I quickly received help from a longtime friend whose book knowledge wisely complement my computer skills. The abundant literature on the subject allowed us to compile the troops movements during the first days of the campaign.\n\nThe three founding principles of our project are: open data, free access and sources attribution. Our maps are available under CC-BY license that allows anyone «to copy, distribute and transmit the material by any means and in any format, to remix, transform and create from the equipment» under the attribution term : you must give appropriate credit and indicate if changes where made.\n\nThe interactive maps result of a meticulous work of analysis and compilation from many sources.\n\n### When was it collected?\nData were assembled between Spring and Autumn 2015.\n\n### Which instruments used to collect it?\nWe did use open source software (Postgresql and QGIS) plus some crafted SQL and Ruby scripts.\nCarto is used to deliver all our maps.\n\n### What does \"null\" mean?\nNull values mostly indicated not applicable, rarely unknown.\n\n### Other comments\nThe units positions used in the interactive maps result of a meticulous work of analysis and compilation from many sources.\n\nIf you have comments or questions on this data package ...just drop me an email.\n\n[Andre Heughebaert](mailto:andrejjh+junibis@gmail.com) and Eric Iven\n",
+  "description": "The Campaign of Belgium in 1815 marked the end of the Napoleonic wars. This dataset lists the armies",
+  "temporal": {
+    "name": "Campaign of Belgium, June 1815",
+    "start": "1815-06-15",
+    "end": "1815-06-20"
+  },
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "JunIBIS.be, website dedicated to mapping the Campaign of Belgium in June 1815",
+      "path": "http://www.junibis.be"
+    }
+  ]
+}

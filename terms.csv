@@ -1,0 +1,96 @@
+"id","code","scheme_code","scheme_id","name_de","name_en","name_fr","name_nl"
+1,"Emp","PR",1,"Kaizer","Emperor","Empereur","Keiser"
+2,"FM","PR",1,"Feldmarschall","Field Marshal","Maréchal de Camp","Generalfeldmarschall"
+3,"MdE","PR",1,,"Marshall of the Empire","Maréchal d'Empire","Maréchal d'Empire"
+4,"Gnr","PR",1,"General","General","Général","Generaal"
+5,"LG","PR",1,"Generallieutenant","Lieutenant-General","Général de Division","Luitenant-generaal"
+6,"GM","PR",1,"Generalmajor","Major-General","Général-Major","Generaal-majoor"
+7,"Cln","PR",1,"Oberst","Colonel","Colonel","Kolonel"
+8,"MdC","PR",1,"Brigadegeneral","Brigade General","Maréchal de Camp","Brigadegeneraal"
+9,"LC","PR",1,"Oberstlieutenant","Lieutenant-Colonel","Lieutenant-Colonel","Lieutenant-Colonel"
+10,"Mjr","PR",1,"Major","Major","Major","Majoor"
+11,"bMj","PR",1,,"Brevet-Major","Brevet-Major",
+12,"Cpt","PR",1,"Kapitain","Captain","Capitaine","Kapitein"
+13,"Ltn","PR",1,"Lieutenant","Lieutenant","Lieutenant","Luitenant"
+14,"2Ltn","PR",1,"Unterlieutenant","Second Lieutenant","Second Lieutenant","Onderluitenant"
+15,"Cbn","PR",1,"Bataillonskommandeur","Battalion Chief","Chef de Bataillon","Bataljonchef"
+16,"SAI","PT",2,,"His Imperial Altess","Son Altesse Impériale",
+17,"SMI","PT",2,,"His Imperial Majesty","Sa Majesté Impériale",
+18,"sir","PT",2,,"Sir","Sir",
+19,"brn","PT",2,"Freiherr","Baron","Baron",
+20,"cnt","PT",2,,"Count","Comte",
+21,"prn","PT",2,"Fürst","Prince","Prince",
+22,"duc","PT",2,,"Duke","Duc",
+23,"chv","PT",2,,"Knight","Chevalier",
+24,"hnr","PT",2,"Hochwohlgeboren","the Honourable","l'Honorable",
+25,"hpr","PT",2,"Erbprinz","Hereditary Prince","Prince Héritier","Erfprins"
+26,"lrd","PT",2,,"Lord",,
+27,"mrq","PT",2,,"Marquess","Marquis",
+28,"vic","PT",2,,"Viscount","Vicomte",
+29,"jhr","PT",2,"Jonkheer","Jonkheer","Ecuyer","Jonkheer"
+30,"AR","UR",3,"Armee","Army","Armée","Leger"
+31,"CPS","UR",3,"Korps","Corps","Corps","Korps"
+32,"Div","UR",3,"Division","Division","Division","Divisie"
+33,"Br","UR",3,"Brigade","Brigade","Brigade","Brigade"
+34,"Rgt","UR",3,"Regiment","Regiment","Régiment","Regiment"
+35,"Bn","UR",3,"Bataillon","Bataillon","Bataillon","Bataljon"
+36,"Cie","UR",3,"Kompanie","Company","Companie","Companie"
+37,"Sq","UR",3,"Eskadron","Squadron","Escadron","Escadron"
+38,"Batt","UR",3,"Batterie","Battery","Batterie","Batterij"
+39,"Sub","UR",3,"Untergruppe","Sub-group","Sous-groupe","subgroep"
+40,"Park","UR",3,"Park","Park","Parc","Park"
+41,"E-M","UT",5,"Generalstab","Headquarters","Etat-major","Generale Staf"
+42,"Inf.","UT",5,"Infantrie","Infantry","Infanterie","Infanterie"
+43,"Cav.","UT",5,"Kavallerie","Cavalry","Cavalerie","Cavalerie"
+44,"Art.","UT",5,"Artillerie","Artillery","Artillerie","Artillerie"
+45,"Eng.","UT",5,"Genie","Engineers","Génie","Genie"
+46,"Amb.","UT",5,"Sanitätsdienst","Ambulances","Ambulances","Ambulances"
+47,"British","Nation",6,"Britisch","British","Anglais","Brits"
+48,"French","Nation",6,"Französisch","French","Français","Frans"
+49,"Hanovrian","Nation",6,"Hannoveraner","Hanovrian","Hanovrien","Hanover"
+50,"Brunswick","Nation",6,"Braunschweig","Brunswick","Brunswick","Brunswijks"
+51,"Prussian","Nation",6,"Preußisch","Prussian","Prussien","Pruisisch"
+52,"Dutch","Nation",6,"Niederländisch","Dutch","Hollandais","Netherlands"
+53,"Belgian","Nation",6,"Belgisch","Belgian","Belge","Belgïen"
+54,"ADC","UPR",4,"Aide de camp","Aide de camp","Aide de camp","aide-de-camp"
+55,"CiC","UPR",4,"Oberbefehlshaber","Commander-in-chief","Commandant en Chef","Opperbevelhebber"
+56,"CoAr","UPR",4,"Artillerie Kommandant","Commanding Artillery","Commandant de l'Artillerie","Artillerie Commandant"
+57,"CoCo","UPR",4,"Korps Kommandant","Corps Commander","Commandant de Corps","Korps Commandant"
+58,"CoEn","UPR",4,"Genie Kommandant","Commanding Engineers","Commandant de Génie","Genie Commandant"
+59,"CoOf","UPR",4,"Kommandant","Commanding Officer","Officier commandant","Bevelhebber"
+60,"CoKGLA","UPR",4,"KGL Artillerie Kommandant","Commanding KGL Artillery","Commandant de l'Artillerie KGL","KGL Artillerie Commandant"
+61,"CoRA","UPR",4,"Royal Artillerie Kommandant","Commanding Royal Artillery","Commandant de l'Artillerie Royale","Royal Artillerie Commandant"
+62,"CoRE","UPR",4,"Royal Genie Kommandant","Commanding Royal Engineers","Commandant du Génie Royal","Royal Genie Commandant"
+63,"CoRHA","UPR",4,"RHA Kommandant","Commanding Royal Horse Artillery","Commandant RHA","RHA Commandant"
+64,"CoS","UPR",4,"Generalstabschef","Chief of Staff","Chef d'EM","Stafchef"
+65,"MiSe","UPR",4,,"Military Secretary","Secrétaire Militaire",
+66,"CoIn","UPR",4,"Infanterie Kommandant","Commanding Infantery","Commandant d'Infanterie","Infanterie Commandant"
+67,"CoPe","UPR",4,,"Commander-in-chief","Commandant en personne",
+68,"GrMa","UPR",4,,"Grand-Maréchal","Grand-Maréchal",
+69,"POOr","UPR",4,"1st Ordonanzoffizier","1er Officier d'ordonnance","1er Officier d'ordonnance","1st ordonnansofficier"
+70,"GrEc","UPR",4,,"Grand-Ecuyer","Grand-Ecuyer",
+71,"Cham","UPR",4,,"Chambellan","Chambellan",
+72,"SeEt","UPR",4,,"Secrétaire d'Etat","Secrétaire d'Etat",
+73,"PVdC","UPR",4,,"1er Valet de chambre","1er Valet de chambre",
+74,"CrCa","UPR",4,,"Critique de campagne","Critique de campagne",
+75,"CGQI","UPR",4,,"Commandant GQI","Commandant GQI",
+76,"MdL","UPR",4,,"Maréchal des Logis","Maréchal des Logis",
+77,"MGA","UPR",4,,"Major-Général de l'armée","Major-Général de l'armée",
+78,"CEM","UPR",4,,"Chef d'Etat-major","Chef d'Etat-major",
+79,"DiPa","UPR",4,,"Directeur général Parcs","Directeur général Parcs",
+80,"DiTo","UPR",4,,"Directeur Topographie","Directeur Topographie",
+81,"Cpri","UPR",4,,"Prisonniers","Prisonniers",
+82,"GrPr","UPR",4,,"Commandant en chef de la gendarmerie- Grand Prévot","Commandant en chef de la gendarmerie- Grand Prévot",
+83,"ICR","UPR",4,,"Inspecteur en chef aux revues","Inspecteur en chef aux revues",
+84,"ChC","UPR",4,,"Chirurgien en chef","Chirurgien en chef",
+85,"VMG","UPR",4,,"Vaguemestre général","Vaguemestre général",
+86,"AMG","UPR",4,,"Aide major-général","Aide major-général",
+87,"uCoS","UPR",4,"Generalstabsunterchef","Under Chief of Staff","Sous-chef d’État-Major","Onderstafchef"
+88,"AdGnl","UPR",4,,"Adjudant-général","Adjudant-général",
+89,"CQMG","UPR",4,,"Commandant QMG","Commandant QMG",
+90,"CGQG","UPR",4,,"Commandant GQG","Commandant GQG",
+91,"§absent","ABS",7,"Abwesend","Absent","Absent","Afwezig"
+92,"§notformed","ABS",7,"Nicht gebildet","Not Formed","Non formé","Niet gebildet"
+93,"§detached","ABS",7,"Freistehend","Detached","Détaché","Vrijstaande"
+94,"Battle","ET",8,"Schlacht","Battle","Bataille","Slag"
+95,"Combat","ET",8,"Kampf","Combat","Combat","Gevecht"

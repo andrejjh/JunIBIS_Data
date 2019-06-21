@@ -1,0 +1,9 @@
+"id","code","name_de","name_en","name_fr","name_nl"
+1,"PR",,"Person rank","grade","Rang"
+2,"PT",,"Person title","titre","Titel"
+3,"UR",,"Unit rank","rang","Rang"
+4,"UPR",,"Unit-Person rôle","Rôle unité-personne",
+5,"UT",,"Unit Type","type d'unité",
+6,"Nation",,"Nationality","Nationalité","Nationaliteit"
+7,"ABS","Abwesenheit","Absence","Absence","Afwezigheid"
+8,"ET",,"Event Type","Type d'évenement",
